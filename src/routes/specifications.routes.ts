@@ -1,5 +1,5 @@
 import { Router } from "express";
-import { SpecificationsRepository } from "../modules/cars/repositories/SpecificationsRepository";
+import { SpecificationsRepository } from "../modules/cars/repositories/implementations/SpecificationsRepository";
 import { CreateSpecificationService } from "../modules/cars/services/CreateSpecificationService";
 
 const specificationRoutes = Router();
@@ -17,3 +17,5 @@ specificationRoutes.post("/", (request, response) => {
 
   return response.status(201).send();
 });
+
+export { specificationRoutes };
